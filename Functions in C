@@ -1,0 +1,27 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{ 
+int a[3000],c,mi=0,r,count=0,max,min,b[200],k,n=4,j;
+for(int i=0;i<n;i++)
+  scanf("%d",&a[i]);
+ 
+for (int i = 0; i < n; i++)           
+    {
+        for (int j = 0; j < n; j++)   
+        {
+            if (a[j] > a[i])          
+            {
+                int tmp = a[i];       
+                a[i] = a[j];          
+                a[j] = tmp;           
+            }          
+        }
+    }
+    printf("%d",a[n-1]);
+}
