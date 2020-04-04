@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int a[100],n,b[100],j,g[100],sum=0,temp=0;
+double vi;
+printf("");
+scanf("%d",&n);
+if ((5<=n)&&(n<=50))
+{
+for(int i=0;i<n;i++)
+{
+    printf("");
+scanf("%d",&a[i]);
+}
+for(int i=0;i<n;i++)
+{
+printf("");
+scanf("%d",&b[i]);
+    }
+    for(int i=0;i<n;i++)
+{
+g[i]=a[i]*b[i];
+sum =sum+g[i]; 
+temp=temp+b[i];
+}
+vi=(double)sum/temp;
+
+printf("%.1f\n",vi);
+  }   /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
