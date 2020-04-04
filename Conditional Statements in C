@@ -1,0 +1,18 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{ 
+int n,i;
+scanf("%d",&n);
+char st1[100][100]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+if(n<=9)
+    printf("%s",st1[n]);
+else
+    printf("Greater than 9");
+return 0;
+}
