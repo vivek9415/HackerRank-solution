@@ -1,0 +1,36 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{
+ 
+int a[3000],n,c,g[1000],mi=0,r,count=0,max,min,b[200],k,j;
+scanf("%d",&n);
+for(int i=0;i<n;i++)
+  scanf("%d",&a[i]);
+       for (int i = 0; i < n-1; i++)           
+    {
+        for (int j = 0; j < n-1; j++)   
+        {
+            if (a[j] > a[j+1])          
+            {
+                count++;
+                int tmp = a[j];       
+                a[j] = a[j+1];          
+                a[j+1] = tmp;           
+               
+            }  
+        }
+    }
+    for (int j = 0; j < n; j++)
+    {
+    g[j]=a[j];    
+    }
+printf("Array is sorted in %d swaps.\n",count);
+printf("First Element: %d\n",g[0]);
+printf("Last Element: %d",g[n-1]);
+}
