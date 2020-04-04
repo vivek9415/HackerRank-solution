@@ -1,0 +1,32 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{
+int x1,v1,x2,v2;
+scanf("%d",&x1);
+scanf("%d",&v1);
+scanf("%d",&x2);
+scanf("%d",&v2);
+if((0<=x1<=10000)&&(x1<x2)&&(x2<=10000)&&(1<=v1<=10000)&&(1<=v2<=10000))
+{
+while(x1<=1000000000)
+{
+    x1=x1+v1;
+    x2=x2+v2;
+    if(x1==x2)
+    {
+        printf("YES");
+        return 0;
+    }
+}
+   printf("NO");
+}
+return 0;
+
+}
+
