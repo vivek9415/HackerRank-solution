@@ -1,0 +1,17 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{
+    int n,b,ri,vi;
+scanf("%d",&n);
+scanf("%d",&b);
+ ri=n+b;
+ vi=abs(n-b);
+ printf("%d\n",ri);
+ printf("%d",vi);
+}
