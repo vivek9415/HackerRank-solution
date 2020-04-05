@@ -1,0 +1,32 @@
+ #include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() 
+{
+char a[100][100]={"o' clock","one minute past","two minute past","three minute past","four minute past","five minute past","six minute past","seven minute past","eight minute past","nine minute past","ten minutes past","eleven minutes past","twelve minutes past","thirteen minutes past","fourteen minutes past","quarter past","sixteen minutes past","seventeen minutes past","eighteen minutes past","nineteen minutes past","twenty minutes past","twenty one minutes past","twenty two minutes past","twenty three minutes past","twenty four minutes past","twenty five minutes past","twenty six minutes past","twenty seven minutes past","twenty eight minutes past","twenty nine minutes past","half past"};
+char b[15][15]={"","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"};
+char c[100][100]={"","one minutes to","two minutes to","three minutes to","four minutes to","five minutes to","six minutes to","seven minutes to","eight minutes to","nine minutes to","ten minutes to","eleven minutes to","twelve minutes to","thirteen minutes to","fourteen minutes to","quarter to","sixteen minutes to","seventeen minutes to","eighteen minutes to","nineteen minutes to","twenty minutes to","twenty one minutes to","twenty two minutes to","twenty three minutes to","twenty four minutes to","twenty five minutes to","twenty six minutes to","twenty seven minutes to","twenty eight minutes to","twenty nine minutes to",};
+int n,d;
+scanf("%d",&d);
+scanf("%d",&n);
+if((1<=d&&d<=12)&&(0<=n&&n<60))
+{
+if((n!=0)&&(1<=n)&&(n<=30))
+{
+printf("%s %s",a[n],b[d]);
+}
+if(n==0)
+{
+    printf("%s %s",b[d],a[n]);
+}
+if(n>30)
+{
+    printf("%s %s",c[60-n],b[d+1]);
+}
+}
+return 0;
+}
