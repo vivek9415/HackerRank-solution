@@ -1,0 +1,45 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+int n,a[100],ce,te,tt;
+scanf("%d",&n);
+if(1<=n&&n<=60)
+{
+for(int i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+}
+for(int i=0;i<n;i++)
+{
+    if(0<=a[i]&&a[i]<38)
+    {
+        printf("%d\n",a[i]);
+    }
+    if(38<=a[i]&&a[i]<=100&&a[i]%5!=0)
+    {
+        int te =a[i]%5;
+        int ce=5-te;
+        if(ce>=3)
+        {
+        printf("%d\n",a[i]);    
+        }
+        if(ce<3)
+        {
+            tt=a[i]+ce;
+            printf("%d\n",tt);
+    }
+        }
+        if(38<=a[i]&&a[i]%5==0&&a[i]<=100)
+        {
+            printf("%d\n",a[i]);
+        }
+    }
+}
+return 0;
+}
