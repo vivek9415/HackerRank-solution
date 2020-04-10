@@ -1,0 +1,26 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    int n,a[1000],sum=0,b[100],vi=5,t,c,r;
+    scanf("%d",&n);
+    if(1<=n&&n<=50)
+    {
+    a[0]=5;
+    b[0]=2;
+for(int i=1;i<n;i++)
+    {
+    a[i]=(vi/2)*3;
+    vi=a[i];
+    b[i]=a[i]/2;
+    sum=sum+b[i];
+    }
+        printf("%d\n",sum+b[0]);
+    }
+    return 0;
+}
