@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int aand=0,oor=0,xxr=0,n,k;
+    scanf("%d%d",&n,&k);
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=i+1;j<=n;j++)
+        {
+            if(aand<(i&j)&&(i&j)<k)
+            {            
+            aand=i&j;
+    }
+    if(oor<(i|j)&&(i|j)<k)
+            {
+            oor=i|j;
+    }
+    if(xxr<(i^j)&&(i^j)<k)
+            {
+             xxr=i^j;
+    }
+    }
+    }
+    printf("%d\n",aand);
+    printf("%d\n",oor);
+    printf("%d",xxr);
+    }
