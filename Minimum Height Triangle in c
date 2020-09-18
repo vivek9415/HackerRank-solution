@@ -1,0 +1,33 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int lowestTriangle(int base, int area){
+    // Complete this function
+    float height=(2*(float)area)/(float)base;
+    int h2;
+    float h3;
+    h2=(int)height;
+    h3=height-(int)h2;
+    if(h3==0){
+        return h2;
+    }
+    else{
+return h2+1;
+    }
+    
+    
+}
+
+int main() {
+    int base; 
+    int area; 
+    scanf("%d %d", &base, &area);
+    int height = lowestTriangle(base, area);
+    printf("%d\n", height);
+    return 0;
+}
