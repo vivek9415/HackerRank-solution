@@ -1,0 +1,33 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+ int p[1000],n,output;
+ scanf("%d",&n);
+ if(0<n&&n<1000000){
+for(int i=0;i<n;i++)
+{
+    scanf("%d",&p[i]);
+
+}
+for(int i=0;i<n;i++)
+{
+if(p[i]==1)
+{
+    output=0;
+    printf("%d\n",output);
+}
+else {
+output=(p[i]*(p[i]-1))/2;
+printf("%d\n",output);
+}
+}
+ }
+return 0;
+}
